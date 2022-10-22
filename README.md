@@ -1,6 +1,8 @@
 # Overview
 
-Adds async support to Django REST Framework
+Adds async support to Django REST Framework.
+
+Currently not production ready. Use at your own risk :)
 
 # Requirements
 
