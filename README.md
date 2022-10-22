@@ -18,15 +18,15 @@ pip install django-rest-framework-async
 # Example
 
 ```
-    from drfa.decorators import api_view
-    from drfa.views import APIView
+from drfa.decorators import api_view
+from drfa.views import APIView
 
-    class AsyncView(APIView):
-        async def get(self, request):
-            return Response({"message": "This is an async class based view."})
+class AsyncView(APIView):
+    async def get(self, request):
+        return Response({"message": "This is an async class based view."})
 
 
-    @api_view(['GET'])
-    async def async_view(request):
-        return Response({"message": "This is an async function based view."})
+@api_view(['GET'])
+async def async_view(request):
+    return Response({"message": "This is an async function based view."})
 ```
