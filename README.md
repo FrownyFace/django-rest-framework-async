@@ -1,12 +1,23 @@
-# Async Views
+# Overview
 
-When using Django 4.1 and above, REST framework allows you to work with async class and function based views.
+Adds async support to Django REST Framework
 
-For class based views, all handler methods must be async, otherwise Django will raise an exception. For function based views, the function itself must be async.
+# Requirements
 
-For example:
+- Python 3.10+
+- Django 4.1+
 
-    from 
+# Installation
+
+```
+pip install django-rest-framework-async
+```
+
+# Example
+
+```
+    from drfa.decorators import api_view
+    from drfa.views import APIView
 
     class AsyncView(APIView):
         async def get(self, request):
@@ -16,3 +27,4 @@ For example:
     @api_view(['GET'])
     async def async_view(request):
         return Response({"message": "This is an async function based view."})
+```
