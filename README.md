@@ -17,7 +17,7 @@ pip install django-rest-framework-async
 
 # Example
 
-```
+```python
 from drfa.decorators import api_view
 from drfa.views import APIView
 
